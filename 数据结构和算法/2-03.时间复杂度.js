@@ -25,3 +25,10 @@ function fn(arr = []) {
         }
     }
 }
+
+function fn() {
+    // O(n*logn)
+    for () {
+        // 二分
+    }
+}
