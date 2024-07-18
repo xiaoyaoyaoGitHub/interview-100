@@ -7,7 +7,7 @@ function fn(obj = {}, key) {
     return obj[key]
 }
 function fn(obj = {}, key) {
-    // O(1)s
+    // O(1)
     return obj.a + obj.b + obj.c
 }
 
