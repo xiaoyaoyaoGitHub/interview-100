@@ -1,0 +1,23 @@
+{
+  "name": "interview-100",
+  "version": "1.0.0",
+  "description": "前端面试100道题详解",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoyaoyaoGitHub/interview-100.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoyaoyaoGitHub/interview-100/issues"
+  },
+  "homepage": "https://github.com/xiaoyaoyaoGitHub/interview-100#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
