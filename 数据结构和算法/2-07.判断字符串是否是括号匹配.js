@@ -23,7 +23,7 @@ function isMatch(left, right) {
 
 /**
  * 时间复杂度: O(n); 有一次for循环
- * 空间复杂度: O(n);
+ * 空间复杂度: O(n); 设定了一个stack,长度随输入字符串变化
  * @param {*} str 
  * @returns 
  */
