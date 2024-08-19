@@ -3,16 +3,16 @@
  */
 
 const tree = {
-    value: 10,
+    value: 5,
     left: {
-        value: 8,
+        value: 3,
         left: {
-            value: 9,
+            value: 2,
             left: null,
             right: null
         },
         right: {
-            value: 11,
+            value: 4,
             left: null,
             right: null
         }
@@ -20,12 +20,12 @@ const tree = {
     right: {
         value: 7,
         left: {
-            value: 3,
+            value: 6,
             left: null,
             right: null
         },
         right: {
-            value: 4,
+            value: 8,
             left: null,
             right: null
         }
@@ -47,11 +47,12 @@ const preOrderTravers = (root) => {
  * 中序遍历 left => root => right
  * @param {} root 
  */
-const inOrderTravers = (root) => {
+const inOrderTravers = (root, arr) => {
     if (root === null) return
-    inOrderTravers(root.left)
-    console.log(root.value)
-    inOrderTravers(root.right)
+    inOrderTravers(root.left, arr)
+    // console.log(root.value, )
+    arr.push(root.value)
+    inOrderTravers(root.right, arr)
 }
 
 /**
@@ -66,4 +67,22 @@ const postOrderTravers = (root) => {
 
 // preOrderTravers(tree)
 // inOrderTravers(tree)
-postOrderTravers(tree)
+// postOrderTravers(tree)
+
+/**
+ * 注:二叉树中序遍历后为递增 数组
+ * @param {*} root 
+ * @param {*} k 
+ */
+const getKthNumber = (root, k) => {
+    const arr = [];
+    inOrderTravers(root, arr);
+    console.log(arr)
+    return arr[k - 1] || null
+}
+
+module.exports = {
+    getKthNumber
+}
+
+console.log(getKthNumber(tree, 300))
