@@ -36,9 +36,10 @@ const tree = {
  * 前序遍历
  * root => left => right
  */
-const preOrderTravers = (root) => {
+const preOrderTravers = (root, arr) => {
     if (root === null) return;
-    console.log(root.value);
+    // console.log(root.value);
+    arr.push(value)
     preOrderTravers(root.left);
     preOrderTravers(root.right)
 }
@@ -50,7 +51,7 @@ const preOrderTravers = (root) => {
 const inOrderTravers = (root, arr) => {
     if (root === null) return
     inOrderTravers(root.left, arr)
-    // console.log(root.value, )
+    console.log(root.value)
     arr.push(root.value)
     inOrderTravers(root.right, arr)
 }
@@ -66,8 +67,8 @@ const postOrderTravers = (root) => {
 }
 
 // preOrderTravers(tree)
-// inOrderTravers(tree)
-// postOrderTravers(tree)
+// inOrderTravers(tree, [])
+postOrderTravers(tree)
 
 /**
  * 注:二叉树中序遍历后为递增 数组
@@ -81,8 +82,8 @@ const getKthNumber = (root, k) => {
     return arr[k - 1] || null
 }
 
-module.exports = {
-    getKthNumber
-}
+// module.exports = {
+//     getKthNumber
+// }
 
-console.log(getKthNumber(tree, 300))
+// console.log(getKthNumber(tree, 300))
