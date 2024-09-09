@@ -53,7 +53,7 @@ const inOrderTravers = (root, arr) => {
     inOrderTravers(root.left, arr)
     console.log(root.value)
     arr.push(root.value)
-    inOrderTravers(root.right, arr)
+    inOrderTravers(root.right, arr) \
 }
 
 /**
@@ -82,8 +82,8 @@ const getKthNumber = (root, k) => {
     return arr[k - 1] || null
 }
 
-// module.exports = {
-//     getKthNumber
-// }
+module.exports = {
+    getKthNumber
+}
 
 // console.log(getKthNumber(tree, 300))
