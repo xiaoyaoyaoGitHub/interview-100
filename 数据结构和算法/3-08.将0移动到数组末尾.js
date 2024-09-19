@@ -37,6 +37,7 @@ const moveZeroes2 = (arr) => {
         if (arr[i] === 0) {
             if (j < 0) j = i // j指向第一个0
         }
+        // j为慢指针指向0  i为快指针指向非0
         if (arr[i] !== 0 && j >= 0) {
             arr[j] = arr[i]
             arr[i] = 0
@@ -45,8 +46,6 @@ const moveZeroes2 = (arr) => {
     }
     return arr
 }
-
-
 
 
 console.log(moveZeroes2([1, 0, 0, 0, 2, 3, 0, 4, 0, 5, 0, 6]))
