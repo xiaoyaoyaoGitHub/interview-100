@@ -41,6 +41,7 @@ const findContinueStr = (str) => {
     }
 }
 
+// 时间复杂度 O(n)
 const findContinueStr2 = (str) => {
     const length = str.length;
     if (length === 0) {
@@ -79,6 +80,23 @@ const findContinueStr2 = (str) => {
 
 }
 
+/**
+ * ! 慎用 时间复杂度为O(n) 会增加空间复杂度
+ * 使用正则 
+ */
+const findCoutinueStrReg = (str) => {
+    const arr = str.match(/(\w)\1*/g)
+    const maxLength = Math.max(...arr.map(item => item.length))
+    const result = arr.reduce((total, curr, index) => {
+        if (curr.length === maxLength) {
+            total['char'] = curr[0]
+            total.length = maxLength
+        }
+        return total
+    }, {})
+    return result
+}
+
 module.exports = {
     findContinueStr,
     findContinueStr2
@@ -86,3 +104,4 @@ module.exports = {
 
 // console.log(findContinueStr2('abbdddddddddddccccccc'))
 // console.log(findContinueStr('abbdddddddddddccccccc'))
+// console.log(findCoutinueStrReg('abbdddddddddddccccccc'))
