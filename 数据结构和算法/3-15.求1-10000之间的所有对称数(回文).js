@@ -27,7 +27,9 @@ const findPalindromeNumbers1 = (max) => {
 }
 
 // console.info(findPalindromeNumbers1(200))
-
+console.time('findPalindromeNumbers1')
+findPalindromeNumbers1(100 * 10000)
+console.timeEnd('findPalindromeNumbers1')
 
 /**
  * * 思路2: 字符串首尾比较
@@ -62,6 +64,9 @@ const findPalindromeNumbers2 = (max) => {
 }
 
 // console.info(findPalindromeNumbers2(200))
+console.time('findPalindromeNumbers2')
+findPalindromeNumbers2(100 * 10000)
+console.timeEnd('findPalindromeNumbers2')
 
 /**
  * * 思路3: 生成翻转数
@@ -90,7 +95,17 @@ const findPalindromeNumbers3 = (max) => {
     return res
 }
 
-console.info(findPalindromeNumbers3(200))
+console.time('findPalindromeNumbers3')
+findPalindromeNumbers3(100 * 10000)
+console.timeEnd('findPalindromeNumbers3')
+
+
+/**
+ * findPalindromeNumbers1: 561.708ms
+ * findPalindromeNumbers2: 64.512ms
+ * findPalindromeNumbers3: 53.547ms
+ */
+
 
 
 module.exports = {
