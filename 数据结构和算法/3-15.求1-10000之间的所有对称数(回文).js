@@ -1,6 +1,20 @@
 /**
  * 求1-100000之间的所有对称数(回文)
  * 0,1,2,11,22,101,232,...
+ * ! 重点: 
+ *     * 尽量不要转换数据结构,尤其是数组这种有序结构
+ *     * 尽量不要用内置API,如reverse,不好识别复杂度
+ *     * 数字操作最快,其次是字符串
+ */
+
+
+/**
+ * findPalindromeNumbers1: 561.708ms
+ * findPalindromeNumbers2: 64.512ms
+ * findPalindromeNumbers3: 53.547ms
+ * 思路1: 看似是O(n),但是数组转换/操作都需要时间,所以慢
+ * 思路2 vs 思路3:操作数字更快(电脑原型就是计算器)
+ * 思路2 要用栈, 不合适, 因为栈也是操作数组,会慢
  */
 
 /**
@@ -100,11 +114,6 @@ findPalindromeNumbers3(100 * 10000)
 console.timeEnd('findPalindromeNumbers3')
 
 
-/**
- * findPalindromeNumbers1: 561.708ms
- * findPalindromeNumbers2: 64.512ms
- * findPalindromeNumbers3: 53.547ms
- */
 
 
 
